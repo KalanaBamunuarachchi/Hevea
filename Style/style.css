@@ -15,13 +15,25 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 999; /* Ensure preloader stays on top */
-    background-color: #fff; /* Optional background color for preloader */
+    z-index: 999; 
+    background-color: #fff; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.dashboard {
-    padding: 20px;
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  padding: 10px;
+  font-family: Lemon; 
+  font-size: 30pt;  
+  text-decoration: none;
+  color: #84b228; 
+}
+
+.logo a {
+  color: #84b228; 
+  text-decoration: none;
 }
