@@ -9,14 +9,54 @@
 
 </head>
 <body>
-    <div class="preloader">
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-        <dotlottie-player src="https://lottie.host/5a1d39f3-a878-432e-8c3e-cf5227f17000/3FsSdRcIQX.json" background="transparent" speed="1" style="width: 800px; height: 800px;" autoplay></dotlottie-player>
+    <div class="container">
+        <div class="preloader">
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+            <dotlottie-player src="https://lottie.host/5a1d39f3-a878-432e-8c3e-cf5227f17000/3FsSdRcIQX.json" background="transparent" speed="1" style="width: 1000px; height: 1000px;" autoplay></dotlottie-player>
+        </div>
+        <main>
+            <a id="logo" href='https://hevea.net/' target='_blank'>HEVEA</a>
+            <!-- main parameter -->
+            <div class="parameter">
+                <!-- temperature -->
+                <div class="temperature"> 
+                    <div class="status">
+                        <div class="info">
+                            <h3>TEMPERATURE &nbsp;<span class="mesure">℃</span></h3>
+                            <h1>23.45</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- Humidity -->
+                <div class="humidity"> 
+                    <div class="status">
+                        <div class="info">
+                            <h3>HUMIDITY &nbsp;<span class="mesure">℃</span></h3>
+                            <h1>23.45</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- illuminance -->
+                <div class="illuminance"> 
+                    <div class="status">
+                        <div class="info">
+                            <h3>ILLUMINANCE &nbsp;<span class="mesure">℃</span></h3>
+                            <h1>23.45</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- soil moisture -->
+                <div class="moisture"> 
+                    <div class="status">
+                        <div class="info">
+                            <h3>SOIL MOISTURES &nbsp;<span class="mesure">℃</span></h3>
+                            <h1>23.45</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-
-    <main>
-        <a id="logo" href='https://hevea.net/' target='_blank'>HEVEA</a>
-    </main>
       
       
     

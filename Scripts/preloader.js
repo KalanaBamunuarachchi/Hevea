@@ -1,7 +1,7 @@
 const preloader = document.querySelector('.preloader');
-const dashboard = document.querySelector('.dashboard');
+const main = document.querySelector('.main');
 
 setTimeout(() => {
   preloader.style.display = 'none';
-  dashboard.style.display = 'block';
+  main.style.display = 'block';
 }, 4000); // Replace with desired preloader duration (ms)

@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root{
+  --card-border-radius: 1rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 1.2rem;
+  --color-light: rgba(132, 139, 200, 0.18);
+
+  --card-padding: 1.2rem;
+  --card-width:400px;
+  --padding-1: 1.2rem;
+
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
 *{
   margin: 0;
   padding: 0;
@@ -11,15 +24,21 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    display: flex;
-    font-size: 0.88rem;
-    user-select: none;
-    overflow-x: hidden;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5; /* Optional background color for preloader visibility */
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  user-select: none;
+  overflow-x: hidden;
+  background-color: #f5f5f5; /* Optional background color for preloader visibility */
+}
+
+.container{
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 12rem auto 23rem;
 }
 
 .preloader {
@@ -30,21 +49,66 @@ body {
     height: 100%;
     z-index: 999; 
     background-color: #fff; 
-  
     display: flex;
     justify-content: center;
     align-items: center;
 }
+main .parameter h3 > .mesure{
+  color: #ff0000;
+  /* display: inline-block; 
+  padding: 2px 5px; 
+  background-color: rgb(255, 0, 0); 
+  opacity: 0.5; 
+  border-radius: 0.5rem;
+  margin-left: 3px; */
+}
 
+h3{
+  font-weight: 300;
+  font-size: 1.2rem;
+  
+}
+
+main{
+  margin-top: 1.4rem;
+
+}
 
 main #logo{
-  position: fixed;
-  top: 10px;
-  left: 20px;
-  padding: 10px;
+  /* left: 20px;
+  padding: 10px; */
   font-size: 30pt;
   text-decoration: none;
   color: #84b228;
   font-family: Lemon;
 
+}
+
+main .parameter{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+
+main .parameter >div{
+  background-color: white;
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  width: var(--card-width);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+main .parameter >div .status{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .parameter h1{
+  margin-left: 130px;
+  font-size: 32pt;
+  
 }
