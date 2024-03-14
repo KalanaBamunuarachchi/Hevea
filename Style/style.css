@@ -69,6 +69,11 @@ h3{
   
 }
 
+h2{
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
 main{
   margin-top: 1.4rem;
 
@@ -77,7 +82,7 @@ main{
 main #logo{
   /* left: 20px;
   padding: 10px; */
-  font-size: 30pt;
+  font-size: 40pt;
   text-decoration: none;
   color: #84b228;
   font-family: Lemon;
@@ -111,4 +116,12 @@ main .parameter h1{
   margin-left: 130px;
   font-size: 32pt;
   
+}
+
+main .plantation-map{
+  margin-top: 1.3rem;
+}
+
+main .plantation-map{
+  margin-bottom: 0.8rem;
 }
