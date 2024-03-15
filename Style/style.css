@@ -169,6 +169,8 @@ button > svg {
 
 main .plantation-map{
   margin-top: 1.3rem;
+  overflow-y: auto;
+  margin-bottom: 1.3rem;
 }
 
 main .plantation-map h2{
@@ -179,6 +181,7 @@ main .plantation-map table{
   background-color: white;
   width: 100%;
   padding: var(--card-padding);
+  
   text-align: center;
   box-shadow: var(--box-shadow);
   border-radius: var(--card-border-radius);
@@ -195,5 +198,32 @@ main table tbody td{
 
 main table tbody tr:last-child td{
   border: none;
+ 
 
+}
+
+main .plantation-map table thead {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Optional background color for better visibility */
+  z-index: 1; /* Ensure header stays above content when scrolling */
+}
+
+main .plantation-map{
+  /* ... your existing styles ... */
+  overflow-y: auto;
+  height: 300px; /* Set a fixed height for the container (adjust as needed) */
+}
+
+.plantation-map::-webkit-scrollbar{
+  width: 10px;
+}
+
+.plantation-map::-webkit-scrollbar-track{
+  border-radius: 8px;
+  background-color: #e7e7e7;
+}
+.plantation-map::-webkit-scrollbar-thumb{
+  border-radius: 8px;
+  background-color: #84b228;
 }
