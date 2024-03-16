@@ -19,3 +19,12 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 
+// document.getElementById("open-register-form").addEventListener("click", function(){
+//   document.querySelector(".popup").style.display = "flex";
+// })
+
+// document.querySelector(".close").addEventListener("click", function(){
+//   document.querySelector(".popup").style.display = "none";
+// })
+
+//chart setup

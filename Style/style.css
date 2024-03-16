@@ -30,7 +30,7 @@ body {
   font-size: 0.88rem;
   user-select: none;
   overflow-x: hidden;
-  background-color: #f5f5f5; /* Optional background color for preloader visibility */
+  background-color: #f5f5f5; 
 }
 
 .container{
@@ -123,8 +123,8 @@ main .parameter h1{
 }
 
 
-main .button {
-  cursor: pointer;
+main #open-register-form {
+ cursor: pointer;
  font-weight: 700;
  font-family: Helvetica,"sans-serif";
  transition: all .2s;
@@ -137,31 +137,31 @@ main .button {
  font-size: 15px;
 }
 
-.button .text {
+#open-register-form .text {
  color: white;
  font-weight: 700;
  font-size: 1em;
  transition: 400ms;
 }
 
-.button svg path {
+#open-register-form svg path {
  transition: 400ms;
 }
 
-.button:hover {
+#open-register-form:hover {
  background-color: transparent;
 }
 
-.button:hover .text {
+#open-register-form:hover .text {
  color: #84b228;
 }
 
-.button:hover svg path {
+#open-register-form:hover svg path {
  fill: #84b228;
  
 }
 
-button > svg {
+#open-register-form > svg {
  width: 34px;
  margin-left: 5px;
  transition: transform .3s ease-in-out;
@@ -171,6 +171,7 @@ main .plantation-map{
   margin-top: 1.3rem;
   overflow-y: auto;
   margin-bottom: 1.3rem;
+  border-radius: var(--card-border-radius);
 }
 
 main .plantation-map h2{
@@ -178,10 +179,9 @@ main .plantation-map h2{
 }
 
 main .plantation-map table{
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 100%;
   padding: var(--card-padding);
-  
   text-align: center;
   box-shadow: var(--box-shadow);
   border-radius: var(--card-border-radius);
@@ -201,18 +201,21 @@ main table tbody tr:last-child td{
  
 
 }
-
+th{
+  padding: 1rem;
+ 
+}
 main .plantation-map table thead {
   position: sticky;
   top: 0;
-  background-color: white; /* Optional background color for better visibility */
-  z-index: 1; /* Ensure header stays above content when scrolling */
+  background-color: rgb(255, 255, 255);
+  z-index: 1; 
+  padding: 1rem;
 }
 
 main .plantation-map{
-  /* ... your existing styles ... */
   overflow-y: auto;
-  height: 300px; /* Set a fixed height for the container (adjust as needed) */
+  height: 300px; 
 }
 
 .plantation-map::-webkit-scrollbar{
@@ -226,4 +229,42 @@ main .plantation-map{
 .plantation-map::-webkit-scrollbar-thumb{
   border-radius: 8px;
   background-color: #84b228;
+}
+
+/* info card css */
+
+.right-section{
+  margin-top: 160px;
+  box-sizing: border-box;
+
+}
+
+.right-section .info-card{
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  width: 100%;
+  height: 727px;
+  background-color: rgb(252, 252, 252);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 1.3rem;
+
+}
+
+
+.details {
+  display: flex;
+
+}
+
+.info p{
+  font-size: 24px;
+}
+
+.info h4{
+  font-size: 22px;
 }
