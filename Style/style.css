@@ -243,7 +243,7 @@ main .plantation-map{
   display: flex;
   justify-content: left;
   text-align: left;
-  width: 100%;
+  width: 975px;
   height: 727px;
   background-color: rgb(252, 252, 252);
   padding: var(--card-padding);
@@ -255,6 +255,32 @@ main .plantation-map{
 
 }
 
+.details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.info {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.image {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
 
 .details {
   display: flex;
@@ -268,3 +294,4 @@ main .plantation-map{
 .info h4{
   font-size: 22px;
 }
+
