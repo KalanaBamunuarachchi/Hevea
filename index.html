@@ -63,6 +63,12 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4z"></path><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path></svg>
                 </button> 
             </div>
+            <div id="modal" style="display: none; position: fixed; z-index: 10; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4);">
+                <div style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 30%;">
+                    <span id="close" style="color: #aaa; float: right; font-size: 28px; font-weight: bold;">&times;</span>
+                    <div id="modal-content"></div>
+                </div>
+            </div>
             <!-- Plantation map -->
             <div class="plantation-map">
                 <!-- <h2>Plantation Map</h2> -->
@@ -218,8 +224,11 @@
                         <p>Plant No <h4 class="number"> 01</h4></p><br>
                         <p>Plant Health <h4 class="condition"> Good</h4></p><br><br><br>
                     </div>
+                    <div class="image">
+                        <img src="/Assets/Images/plant.svg" alt="">
+                    </div>
                 </div>
-                <div class="myChart" style="position: relative; height:40vh; width:80vw">
+                <div class="myChart" style="position: relative; height:40vh; width:120vw">
                     <canvas id="myChart"></canvas>
                 </div>
 
@@ -234,6 +243,25 @@
     <script src="/Scripts/preloader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/Scripts/chart.js"></script>
+    <!-- <script>
+        document.getElementById('open-register-form').addEventListener('click', function() {
+             window.open('registration.html', 'Registration', 'height=600,width=800');
+        });;
+    </script> -->
+    <script>
+        document.getElementById('open-register-form').addEventListener('click', function() {
+        fetch('registration.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('modal-content').innerHTML = data;
+                document.getElementById('modal').style.display = "block";
+            });
+        });
+
+        document.getElementById('close').addEventListener('click', function() {
+        document.getElementById('modal').style.display = "none";
+        });
+    </script>
 
 
 
