@@ -1,12 +1,22 @@
+function getLastSixDays() {
+  let result = [];
+  for(let i=0; i<6; i++) {
+    let d = new Date();
+    d.setDate(d.getDate() - i);
+    result.unshift(d.toISOString().slice(0,10));
+  }
+  return result;
+}
+
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ['day1', 'day2', 'day3', 'day4', 'day5', 'day6'],
+    labels: getLastSixDays(),
     datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
+      label: 'Circumference (mm)',
+      data: [12, 19, 3, 5, 2, 300],
     }]
   },
   options: {
@@ -17,6 +27,4 @@ new Chart(ctx, {
       }
     }
   }
-
 });
-
